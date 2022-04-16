@@ -24,6 +24,7 @@ class App
             var tweets = browserActions.GetTweets(profileLink);
 
             var nonRetweetedUrls = browserActions.GetNonRetweetedUrlFormTwitterProfile(tweets).Take(3).ToList();
+
             var tweetSources = browserActions.GetTweetSource(nonRetweetedUrls);
 
             var twitterProfile = new TwitterProfile
