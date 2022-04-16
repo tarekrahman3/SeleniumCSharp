@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Selenium
 {
@@ -6,11 +7,13 @@ namespace Selenium
     {
         public IWebDriver WebDriver { get; }
         public IJavaScriptExecutor jsExecutor { get; }
+        public WebDriverWait webDriverWait { get; }
 
         public BrowserActions(IWebDriver webDriver)
         {
             WebDriver = webDriver;
             jsExecutor = (IJavaScriptExecutor)WebDriver;
+            webDriverWait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(5));
         }
 
         public IReadOnlyCollection<IWebElement> GetTweets(string url)
@@ -18,11 +21,12 @@ namespace Selenium
 
             WebDriver.Navigate().GoToUrl(url);
 
-            Thread.Sleep(6000);
+            Thread.Sleep(5000);
 
             for (int i = 0; i < 3; i++)
             {
-                jsExecutor.ExecuteScript("window.scrollBy(0,window.innerHeight)");
+                jsExecutor.ExecuteScript("window.scrollBy(0, window.innerHeight)");
+                Thread.Sleep(5000);
             }
 
             return WebDriver.FindElements(By.XPath(Constants.tweetsXpath));
