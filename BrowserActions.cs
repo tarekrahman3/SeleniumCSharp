@@ -10,16 +10,26 @@ namespace Selenium
     public class BrowserActions
     {
         public IWebDriver WebDriver { get; }
+        public IJavaScriptExecutor jsExecutor { get; }
 
         public BrowserActions(IWebDriver webDriver)
         {
             WebDriver = webDriver;
+            jsExecutor = (IJavaScriptExecutor)WebDriver;
         }
 
         public IReadOnlyCollection<IWebElement> GetTweets(string url)
         {
+
             WebDriver.Navigate().GoToUrl(url);
-            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+
+            Thread.Sleep(6000);
+
+            for (int i = 0; i < 3; i++)
+            {
+                jsExecutor.ExecuteScript("window.scrollBy(0,window.innerHeight)");
+            }
+
             return WebDriver.FindElements(By.XPath(Constants.tweetsXpath));
         }
 
@@ -66,6 +76,7 @@ namespace Selenium
             foreach (var nonRetweetedUrl in tweetUrls)
             {
                 WebDriver.Navigate().GoToUrl(nonRetweetedUrl);
+                Thread.Sleep(2000);
 
                 var tweetSource = WebDriver.FindElement(By.XPath(Constants.tweetSourceXpath)).Text;
 
