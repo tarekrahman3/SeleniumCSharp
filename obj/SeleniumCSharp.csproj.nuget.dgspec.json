@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/tarek/SeleniumCSharp/SeleniumCSharp.csproj": {}
+    "E:\\repos\\Twitter-Integration-Analysis-CSharp\\SeleniumCSharp.csproj": {}
   },
   "projects": {
-    "/home/tarek/SeleniumCSharp/SeleniumCSharp.csproj": {
+    "E:\\repos\\Twitter-Integration-Analysis-CSharp\\SeleniumCSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/tarek/SeleniumCSharp/SeleniumCSharp.csproj",
+        "projectUniqueName": "E:\\repos\\Twitter-Integration-Analysis-CSharp\\SeleniumCSharp.csproj",
         "projectName": "SeleniumCSharp",
-        "projectPath": "/home/tarek/SeleniumCSharp/SeleniumCSharp.csproj",
-        "packagesPath": "/home/tarek/.nuget/packages/",
-        "outputPath": "/home/tarek/SeleniumCSharp/obj/",
+        "projectPath": "E:\\repos\\Twitter-Integration-Analysis-CSharp\\SeleniumCSharp.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\Twitter-Integration-Analysis-CSharp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/tarek/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

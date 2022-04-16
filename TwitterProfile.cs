@@ -4,6 +4,7 @@
     {
         public TwitterProfile()
         {
+            ProfileUrl = "";
             NonRetweetedUrls = new List<string>();
             TweetSources = new List<string>();
         }
